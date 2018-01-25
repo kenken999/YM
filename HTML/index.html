@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      
+      .navbar-custom {
+      background-color:#101552;
+      color:#ffffff;
+      border-radius:0;
+    }
+
+    .navbar-custom .navbar-nav > li > a {
+        color:#fff;
+    }
+
+    .navbar-custom .navbar-nav > .active > a {
+        color: #ffffff;
+        background-color:transparent;
+    }
+
+    .navbar-custom .navbar-nav > li > a:hover,
+    .navbar-custom .navbar-nav > li > a:focus,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus,
+    .navbar-custom .navbar-nav > .open >a {
+        text-decoration: none;
+        background-color: #101552;
+    }
+
+    .navbar-custom .navbar-brand {
+        color:#eeeeee;
+    }
+    .navbar-custom .navbar-toggle {
+        background-color:#eeeeee;
+    }
+    .navbar-custom .icon-bar {
+        background-color:#101552;
+    }
+
+    .style1 {
+      padding: 5px 5px 0px;
+    }
+    .style2 {
+      width: 100%;
+      height: 100%;
+      padding: 20px 20px 0px;
+    }
+    .p-style1 {
+      font-size: 3vh;
+      padding: 1vh;
+    }
+    .p-style2 {
+      font-size: 2.8vh;
+      text-align: justify;
+      text-indent: 2em;
+    }
+    </style>
+    <script>
+      function getIntroduction(issues) {
+        var introduction = document.getElementById("introduction");
+        var goCheckupEntrance = document.getElementById("goCheckupEntrance");
+        introduction.innerHTML='<p class="p-style2">肺結核很可怕，但也不可怕。可怕的是，肺結核會傳染；不可怕的是，只要病人規則服藥兩個星期後，就不具傳染力。肺結核是可以治好的，不過，必須長期服藥，必須連續規則服藥六個月以上。但是病人常常在症狀消失之後，自以為好了就不再服藥，殘存體內的細菌就會產生抗藥性，使得治療更加困難。</p>'
+            + '<p class="p-style2">九成以上的人感染了結核桿菌都不會生病，因為我們體內的免疫系統自動會把入侵的細菌消滅。只是身體狀況不佳時，才會讓細菌在體內生長繁殖而生病，這時就要借重藥物來殺細菌。體內的細菌減少到一個程度，症狀會消失，容易讓病人誤以為病好了而停藥，這時殘存體內的細菌，又會慢慢生長繁殖，而且對藥物產生抗藥性，等再度發病時，原來可以殺死細菌的藥就會失效。所以，結核病的治療，一定要持續服藥六個月以上，把體內的結核菌殺光，除惡務盡，否則如同斬草不除根，春風吹又生。</p>'
+            + '<p class="p-style2">目前結核病已經有藥可治，只要規則服藥六個月以上，就可以把病治好。只是在服藥過程中，有時會產生一些副作用，這時，可以請醫師處理，這是必然的過程，不必害怕，家人或親友的支持是非常重要的，要陪伴病人共渡難關。</p>'
+            + '<p class="p-style2">肺結核的防治光靠醫護人員是不夠的，必須大家一起來。如果親友或鄰居得了結核病，不要怕他，不要躲他，要鼓勵他，支持他，陪伴他，把六個月的藥吃完。病人得病吃藥是很辛苦的事，我們應設法幫助病人渡過這漫長的療程，不只可以治好病人，救病人一命，更可以保護自己和其他人不受傳染，功德無量。</p>'
+            + '<p class="p-style2">結核病人的隱私權應予以保障，讓病人安心服藥，免於畏懼他人異樣的眼光。結核病人只是生病了，有病就醫，如此而已。因此，不要歧視病人，不要把結核病人標籤化，污名化。因為污名化，標籤化的結果，會讓病人不敢就醫，反而耽誤病情，賠上性命，也會傳染給他人，尤其是傳染給最親近的人。病患應享有基本的人權，人權教育就是要把尊重與包容的理念，落實於生活中。我們對待結核病患應該尊重與關懷，這是結核病防治非常重要的一環，方能保障社會大眾身心健康。'
+                + '最後，在此提供世界衛生組織公佈的簡易篩檢方法如下︰咳嗽兩週( 2分 )，有痰( 2 分)，體重減輕( 1分)，沒有食慾( 1分)，胸痛(1分 )，如果你有上述症狀達5分以上，建議你趕快就醫檢查。</p>';
+        goCheckupEntrance.innerHTML='<a href="/goTBCheckup"><p class="p-style1">進行檢測</p></a>';
+      }
+
+    </script>
+  <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  -->
+  </head>
+  <body style="height: 100%; background: url('http://localhost:5050/RESOURCES/IMAGE/BG_01.png') center center fixed no-repeat; background-size: cover">
+    <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">陽明大學社區醫學中心</a>
+          <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">導覽按鈕</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首頁</a></li>
+            <li><a href="#">關於</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              role="button">分頁 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">分頁</a></li>
+                <li><a href="#">分頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="introduction" class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 style1">
+          
+      </div>
+    </div>
+<div style="height: 100%; background: url('http://localhost:5050/RESOURCES/IMAGE/BG_01.png') center center fixed no-repeat; background-size: cover">
+    
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1" style="background: pink">
+            <div class="style2" style="background: rgb(255, 0, 0)">
+              <form action="/goIntroduction" method="post">
+                <input type="number" name="issues" value="1" required hidden>
+                <button type="submit" style="border: none; background: none;"><img src="http://localhost:5050/RESOURCES/IMAGE/ICON_01.png" class="img-responsive"></button>
+                <p style="font-size:3vh; padding:1vh">肺結核防治</p>
+              </form>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.767)">
+              <form action="/goIntroduction" method="post">
+                <input type="number" name="issues" value="2" required hidden>
+                <button type="submit" style="border: none; background: none;"><img src="http://localhost:5050/RESOURCES/IMAGE/ICON_02.png" class="img-responsive"></button>
+                <p style="font-size:3vh; padding:1vh">身體活動</p>
+              </form>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.445)">
+              <a href="/goInternetBehaviorCheckup"><img src="http://localhost:5050/RESOURCES/IMAGE/ICON_03.png" class="img-responsive"></a>
+              <p class="p-style1">網路成癮</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.158)">
+              <img src="http://localhost:5050/RESOURCES/IMAGE/ICON_04.png" class="img-responsive">
+              <p class="p-style1">視力健康</p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <a href="/goSleep1Checkup"><img src="http://localhost:5050/RESOURCES/IMAGE/ICON_05.png" class="img-responsive"></a>
+              <p class="p-style1">睡眠健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/IMAGE/ICON_06.png" class="img-responsive">
+              <p class="p-style1">情緒健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/IMAGE/ICON_07.png" class="img-responsive">
+              <p class="p-style1">遠離菸害</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/IMAGE/ICON_08.png" class="img-responsive">
+              <p class="p-style1">健康體位</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</div>
+    <div id="goCheckupEntrance" style="position:fixed; bottom:5%; right:5%; background-color: rgb(25, 231, 25);" >
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      
+      .navbar-custom {
+      background-color:#101552;
+      color:#ffffff;
+      border-radius:0;
+    }
+
+    .navbar-custom .navbar-nav > li > a {
+        color:#fff;
+    }
+
+    .navbar-custom .navbar-nav > .active > a {
+        color: #ffffff;
+        background-color:transparent;
+    }
+
+    .navbar-custom .navbar-nav > li > a:hover,
+    .navbar-custom .navbar-nav > li > a:focus,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus,
+    .navbar-custom .navbar-nav > .open >a {
+        text-decoration: none;
+        background-color: #101552;
+    }
+
+    .navbar-custom .navbar-brand {
+        color:#eeeeee;
+    }
+    .navbar-custom .navbar-toggle {
+        background-color:#eeeeee;
+    }
+    .navbar-custom .icon-bar {
+        background-color:#101552;
+    }
+
+    .introduction-outer-layer {
+      background: rgba(176, 212, 233, 0.8); 
+      box-shadow: 0 0 30px  rgba(176, 212, 233, 0.8);
+      border-radius: 1vh;
+    }
+
+    .style1 {
+      padding: 5px 5px 0px;
+    }
+    .style2 {
+      width: 100%;
+      height: 100%;
+      padding: 20px 20px 0px;
+    }
+    .p-style1 {
+      font-size: 3vh;
+      padding: 1vh;
+    }
+    .p-content1 {
+      font-size: 2.8vh;
+      text-align: justify;
+      text-indent: 2em;
+    }
+    .p-content2 {
+      font-size: 2.8vh;
+      text-align: justify;
+      text-indent: -1em;
+
+    }
+    .p-title1 {
+      font-size: 3vh;
+      text-align: justify;
+      color: red;
+      font-weight: bold;
+    }
+    .p-title2 {
+      font-size: 2.9vh;
+      text-align: justify;
+      font-weight: bold;
+    }
+    .p-title3 {
+      font-size: 2.8vh;
+      text-align: justify;
+      color: red;
+      font-weight: bold;
+    }
+    .ol-content1 {
+      font-size: 2.8vh;
+      text-align: justify;
+    }
+    .ol-content2 {
+      font-size: 2.8vh;
+      text-align: justify;
+      color: red;
+    }
+    </style>
+    <script>
+      function firstLoad () {
+
+      }
+
+      function getIntroduction(issues) {
+        var title = document.getElementById("title");
+        var introduction = document.getElementById("introduction");
+        var goCheckupEntrance = document.getElementById("goCheckupEntrance");
+        var tText = '';
+        var iText = '';
+        var gLink = '';
+
+        switch (issues) {
+          case 1:
+            tText = '肺結核檢測';
+            iText = '<p class="p-content1">肺結核很可怕，但也不可怕。可怕的是，肺結核會傳染；不可怕的是，只要病人規則服藥兩個星期後，就不具傳染力。肺結核是可以治好的，不過，必須長期服藥，必須連續規則服藥六個月以上。但是病人常常在症狀消失之後，自以為好了就不再服藥，殘存體內的細菌就會產生抗藥性，使得治療更加困難。</p>'
+              + '<p class="p-content1">九成以上的人感染了結核桿菌都不會生病，因為我們體內的免疫系統自動會把入侵的細菌消滅。只是身體狀況不佳時，才會讓細菌在體內生長繁殖而生病，這時就要借重藥物來殺細菌。體內的細菌減少到一個程度，症狀會消失，容易讓病人誤以為病好了而停藥，這時殘存體內的細菌，又會慢慢生長繁殖，而且對藥物產生抗藥性，等再度發病時，原來可以殺死細菌的藥就會失效。所以，結核病的治療，一定要持續服藥六個月以上，把體內的結核菌殺光，除惡務盡，否則如同斬草不除根，春風吹又生。</p>'
+              + '<p class="p-content1">目前結核病已經有藥可治，只要規則服藥六個月以上，就可以把病治好。只是在服藥過程中，有時會產生一些副作用，這時，可以請醫師處理，這是必然的過程，不必害怕，家人或親友的支持是非常重要的，要陪伴病人共渡難關。</p>'
+              + '<p class="p-content1">肺結核的防治光靠醫護人員是不夠的，必須大家一起來。如果親友或鄰居得了結核病，不要怕他，不要躲他，要鼓勵他，支持他，陪伴他，把六個月的藥吃完。病人得病吃藥是很辛苦的事，我們應設法幫助病人渡過這漫長的療程，不只可以治好病人，救病人一命，更可以保護自己和其他人不受傳染，功德無量。</p>'
+              + '<p class="p-content1">結核病人的隱私權應予以保障，讓病人安心服藥，免於畏懼他人異樣的眼光。結核病人只是生病了，有病就醫，如此而已。因此，不要歧視病人，不要把結核病人標籤化，污名化。因為污名化，標籤化的結果，會讓病人不敢就醫，反而耽誤病情，賠上性命，也會傳染給他人，尤其是傳染給最親近的人。病患應享有基本的人權，人權教育就是要把尊重與包容的理念，落實於生活中。我們對待結核病患應該尊重與關懷，這是結核病防治非常重要的一環，方能保障社會大眾身心健康。'
+                  + '最後，在此提供世界衛生組織公佈的簡易篩檢方法如下︰咳嗽兩週( 2分 )，有痰( 2 分)，體重減輕( 1分)，沒有食慾( 1分)，胸痛(1分 )，如果你有上述症狀達5分以上，建議你趕快就醫檢查。</p>';
+            gLink = "'/goTBCheckup'";
+            break;
+          case 2:
+            tText = '身體活動';
+            iText = '<p class="p-title1">一、青少年身體活動</p>'
+             +'<p class="p-content1">近年來，青少年身體活動不足以及靜態行為(或稱坐式行為、久坐行為) (sedentary behaviors)盛行的問題逐漸受到關注。這一動一靜的生活型態不僅與青少年個人的生理與心理社會健康息息相關，同時也會影響其學習效率與學業成就。</p>'
+             +'<p class="p-title2">（一）久坐不動，有害健康與學習</p>'
+             +'<p class="p-content1">近幾年北美及西歐許多國家除了持續關注以運動促進健康外，同時也關注到所謂「靜態生活型態」（sedentary lifestyle）（國外有人戲稱為couch potatoes；國內亦有人稱麵龜族或化石族）的嚴重性。除因學校學習及課外補習需要久坐外，青少年常見的坐式行為可包括：看電視、玩電腦及上網、打電動遊戲（含使用手機）等。依據我國「2009年國民健康訪問調查」之數據，國小兒童平均每天看電視超過2小時，若加上使用電腦、平板與滑手機的時間，則逼近3小時。這遠超過美國小兒科醫學會所提建議：兒童每日從事看電視、用電腦、平板與滑手機等與螢幕相關的時間，以不超過2小時為原則。久坐不動已被證實與肥胖有極大相關。研究顯示：在學校透過衛教宣導，即便不增加學生的運動量，光是降低學生看電視的時間，亦足以產生減重的效果。如能搭配鼓勵學生運動，則效果更為顯著。</p>'
+             +'<p class="p-content1">由於上述靜態行為與螢幕使用高度相關，故又稱為螢幕式靜態行為（screen-based sedentary behaviors）。長期從事除造成罹患肥胖的風險提高，造成視力受損外，已有研究指出：平均每日使用超過2小時電腦與電視，可能影響學生在學習上的注意力，進而對其學業成就有不利影響。</p>'
+             +'<p class="p-title2">（二）每天活動60分鐘有益健康成長</p>'
+             +'<p class="p-content1">有鑒於青少年肥胖比率日漸增加以及身心發展的需要，北美及西歐等國家於近年已明確建議：青少年（5-18歲）每日應從事中強度的身體活動累計達60分鐘以上（而非僅30分鐘）。中強度活動是指活動過程中要持續達到讓呼吸輕微加快程度（每分鐘心跳約達到130次以上）。這60分鐘可包含：體育課、課間(後)時間的運動、上下學步行、家務勞動，以及騎自行車、、、等活動。其中若能有3天從事一些阻力訓練，如從事伏地挺身、仰臥起坐及引體向上等動作，以強化肌肉骨骼的發展，對青少年的健康受益更大。 至於尚未養成規律身體活動習慣者，建議從每天至少累計30分鐘中強度身體活動做起。許多持續數十年的長期追蹤研究已顯示：青少年時期養成規律的身體活動習慣，不但對成年時期的運動習慣具有正向的顯著影響。而且，也降低他們在成年階段罹患重大疾病的風險。先前報載，13歲男童體重過重並罹患中風的消息，更提醒我們應培養學生運動習慣，增加活動量並減少久坐不動的時間，以避免肥胖發生及減少罹病風險。</p>'
+             +'<p class="p-title2">（三）青少年『活動量』的評估與介入措施</p>'
+            
+             +'<ol class="ol-content1">'
+              +'<li>本網站青少年身體活動量之評估標準係參照上述歐美等國所訂之身體活動建議量，並採用「美國青少年危險行為調查」（US Youth Risk Behavior Survey）的題項進行測量（US CDC，2009），以利國際接軌及進行比較。至於螢幕式靜態行為係依據以下國際專業學會及期刊文獻（American Academy of Pediatrics, 2001; Mark et al., 2006; Zabinski et al., 2007）所提供之建議，進行研訂。螢幕式靜態行為平均每日少於2小時為正常(綠燈)，2-4小時屬過量(黃燈)，4小時以上則風險超標(紅燈)。</li>'
+              +'<li>使用量表篩檢每週未達到身體活動建議量以及從事過量螢幕式靜態行為的青少年。</li>'
+              +'<li>依據其活動型態，提供其改善身體活動習慣的建議。</li>'
+              +'<li>建議學校針對黃燈族群予以關心，並針對紅燈族群介入輔導。</li>'
+             +'</ol>'
+
+             +'<p class="p-title3">參考文獻</p>'
+             +'<ol class="ol-content2">'
+              +'<li>American Academy of Pediatrics, Committee on Public Education Children, adolescents, and television. Pediatrics 2001; 107:423-6.</li>'
+              +'<li>Mark, AE, Boyce, WF, & Janssen, I. (2006). Television viewing, computer use and total screen time in Canadian youth, Paediatrics & Child Health, 11, 595-599.</li>'
+              +'<li>Zabinski MF, Norman GJ, Sallis JF, Calfas KJ, Patrick K. Patterns of sedentary behavior among adolescents. Health psychology 2007, 26, 113-120.</li>'
+              +'<li>US CDC (2011). 2011 National Youth Risk Behavior Survey. Atlanta: US CDC.</li>'
+             +'</ol>';
+             gLink = "'/goInternalBehaviorCheckup'";
+            break;
+          case 9:
+            tText = "xx";
+            iText = 
+              '<p class="p-title1"></p>'
+              +'<p class="p-content1"></p>'
+              +'<p class="p-title2"></p>'
+              +'<p class="p-content1"></p>'
+              +'<p class="p-content1"></p>'
+              +'<p class="p-title2"></p>'
+              +'<p class="p-content1"></p>'
+              +'<p class="p-title2"></p>'
+              
+              +'<ol class="ol-content1">'
+                +'<li></li>'
+                +'<li></li>'
+                +'<li></li>'
+                +'<li></li>'
+              +'</ol>'
+
+              +'<p class="p-title3">參考文獻</p>'
+              +'<ol class="ol-content2">'
+                +'<li></li>'
+                +'<li></li>'
+                +'<li></li>'
+                +'<li></li>'
+              +'</ol>'
+              gLink = "'xx'";
+            break;
+          case 5:
+            tText = "睡眠健康";
+            iText = 
+              '<p class="p-title1">一、青少年失眠</p>'
+              +'<p class="p-content1">睡眠是人體重要的生理功能。充足而健康的睡眠除了可以消除疲勞之外，更有助於情緒、學習與記憶的整合。睡眠時，腦部所分泌的生長激素與細胞修復的功能，對於發育中的青少年而言更是重要。縱使影響睡眠健康的原因很多，呼吸系統、神經系統、心理因素的病變都有可能造成睡眠疾患。然而，青少年的睡眠問題多半以『失眠』、『日間嗜睡』與『生活作息』混亂來表現。</p>'
+              +'<p class="p-title2">（一）失眠是情緒障礙的警訊</p>'
+              +'<p class="p-content1">研究發現，引起青少年『失眠』的主因以『心理因素』最多。學校課業、家庭關係、同儕與異性相處等各方面的壓力，都有可能以『失眠』來表現。『失眠』同時也是憂鬱症的症狀之一; 而憂鬱症患者正是自殺的高危險群。因此，『失眠』症狀是評估青少年心理衛生的重要管道。</p>'
+              +'<p class="p-title2">（二）日間嗜睡是身體疾病的表徵</p>'
+              +'<p class="p-content1">對於青少年而言，『日間嗜睡』除了會降低警覺性與注意力而影響學習效果之外。因為精神不濟而打瞌睡的現象，更會影響老師與同學對他們觀感，進而造成更多的心理問題。相較於成人，青少年的憂鬱症更常以『嗜睡』來表現。此外，打鼾、過敏等生理疾病，也都會造成『日間嗜睡』。最新的研究發現，『肥胖』的人本身就容易嗜睡，而『肥胖』更是日後出現高血壓、糖尿病等慢性病的開端。因此，青少年一旦出現『日間嗜睡』的現象，應該積極尋找原因並及早矯正。</p>'
+              +'<p class="p-title2">（三）生活作息混亂影響學習能力</p>'
+              +'<p class="p-content1">根據青少年的作息習慣，大致可以區分為兩種型態：(1)早睡早起的『雲雀型』與(2)晚睡晚起的『夜鶯型』。研究發現，『夜鶯型』的作息會造成週間的睡眠不足，進而造成白天上課精神不濟、容易打瞌睡而影響學習效果。除了天生『生理時鐘』的問題外，身心的壓力也可能與『夜鶯型』作息有關。例如：青春期的成長過程、學校課業負擔較重、過多的課外活動、父母管教方式、與社會壓力較大等。國內的研究發現，『夜鶯型』的青少年性格傾向比較神經質，而這群青少年也比較無法充分發揮應有的學習能力。 睡眠障礙對於青少年的生理發展、心理健康、學習能力、人際關係等都會造成不良的影響。不管是『失眠』、『日間嗜睡』或是『生活作息』混亂的問題，都是青少年身心健康出現問題的警訊。因為睡眠障礙的成因涉及數個醫療專業領域，診斷與治療的過程變得更為複雜與費時。國內已經有整合精神科（含兒童青少年精神科）、神經科、胸腔科、耳鼻喉科、牙科等專業醫師的『睡眠醫學』團隊，透過完整的評估與睡眠實驗室檢查，能夠提供更為明確、便捷的治療模式。</p>'
+              +'<p class="p-title2">（四）青少年『睡眠習慣』的評估與介入措施</p>'
+              +'<ol class="ol-content1">'
+                +'<li>「睡眠習慣」的評估分為三大部份：失眠、日間嗜睡、作息型態。'
+                  +'<br><b>A.失眠部份：</b>以「簡短版中文版雅典失眠量表」進行測量。該量表使用五題題項，可有效篩檢出需要進一步診治之嚴重失眠患者。本量表在青少年族群使用之信效度已進行完整研究。'
+                  +'<br><b>B.日間嗜睡部份：</b>以「中文版Epworth嗜睡量表」之部份題項進行測量。原量表在成人族群之信效度業已建立（Chen NH,2002），考量其於青少年族群的適用性，參考睡眠中心專家之意見及效度指標，刪除不適用之題項。修正後之量表使用七題題項，可有效篩檢出日間嗜睡達一定臨床嚴重度、需進一步評估與協助的患者。修正過之量表在青少年族群使用之信效度已進行完整研究。'
+                  +'<br><b>C.作息型態部份：</b>以「中文版睡眠型態偏好量表」之部份題項進行測量。原量表在青少年族群之信效度業已建立（高淑芬, 1998），考量填答之方便性，以統計方法將量表精簡，選出具有代表性之題項，共五題，可有效篩檢出「夜鶯型」的患者。'
+                +'</li>'
+                +'<li>使用量表篩檢失眠症、日間過度嗜睡與夜鶯型的學生，列入協助個案。</li>'
+                +'<li>篩檢陽性個案，轉介至睡眠特別門診作進一步診斷。</li>'
+                +'<li>經診斷疑似器質性睡眠疾患者（如睡眠呼吸中止症、猝睡症），安排完整的睡眠檢查。</li>'
+                +'<li>單純生活作息混亂者或單純失眠者，安排進行團體衛教與行為治療。</li>'
+              +'</ol>'
+
+              +'<p class="p-title3">參考文獻</p>'
+              +'<ol class="ol-content2">'
+                +'<li>Chen NH, Johns MW, Li HY, Chu CC, Liang SC, Shu YH, Chuang ML, Wang PC. Validation of a Chinese version of the Epworth sleepiness scale.Quality of Life Research. 2002; 11: 817 -21</li>'
+                +'<li>高淑芬等人.「睡眠型態偏好量表」之信效度. 臺灣精神醫學1998; 12: 98 -109</li>'
+              +'</ol>'
+              gLink= "'/goSleep1Checkup'";
+            break;
+        }
+
+        title.innerHTML= tText;
+        introduction.innerHTML= iText;
+        goCheckupEntrance.innerHTML= '<button onclick="location.href='+ gLink +'" style="border: none; background: none;"><img src="http://localhost:5050/RESOURCES/IMAGE/test.png" class="img-responsive"></button>';
+      }
+    </script>
+  <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  -->
+  </head>
+  <body onload="getIntroduction(1)">
+    <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">陽明大學社區醫學中心</a>
+          <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">導覽按鈕</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首頁</a></li>
+            <li><a href="#">關於</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              role="button">分頁 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">分頁</a></li>
+                <li><a href="#">分頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+    
+      <div style="text-align:center; height: 10%; width: 100%">
+        <p id="title" style="font-size: 5vh; font-weight:bold">八大面向檢測</p>
+      </div>
+
+      <div style="height: 90%">
+
+      <div class="container" >
+        <div class="introduction-outer-layer col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 style1">
+        <div id="introduction" class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 style1" >
+            <p class="p-title1">一、青少年失眠</p>
+            <p class="p-content1">睡眠是人體重要的生理功能。充足而健康的睡眠除了可以消除疲勞之外，更有助於情緒、學習與記憶的整合。睡眠時，腦部所分泌的生長激素與細胞修復的功能，對於發育中的青少年而言更是重要。縱使影響睡眠健康的原因很多，呼吸系統、神經系統、心理因素的病變都有可能造成睡眠疾患。然而，青少年的睡眠問題多半以『失眠』、『日間嗜睡』與『生活作息』混亂來表現。</p>
+            <p class="p-title2"></p>
+            <p class="p-content1"></p>
+            <p class="p-content1"></p>
+            <p class="p-title2"></p>
+            <p class="p-content1"></p>
+            <p class="p-title2"></p>
+            
+            <ol class="ol-content1">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+
+            <p class="p-title3">參考文獻</p>
+            <ol class="ol-content2">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+        </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1" style="background: pink">
+            <div class="style2" style="background: rgb(255, 0, 0)">
+              <a href="/goTBCheckup"><img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive"></a>
+              <p style="font-size:3vh; padding:1vh">肺結核防治</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.767)">
+              <a href="/goTBChecked"><img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive"></a>
+              <p class="p-style1">身體活動</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.445)">
+              <a href="/goInternetBehaviorCheckup"><img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive"></a>
+              <p class="p-style1">網路成癮</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.158)">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">視力健康</p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <a href="/goSleep1Checkup"><img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive"></a>
+              <p class="p-style1">睡眠健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">情緒健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">遠離菸害</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">健康體位</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <div id="goCheckupEntrance" style="position:fixed; bottom:5%; right:5%; height: 8%; width: 8%;" >
+        
+    </div>
+    
+  </body>
+</html>

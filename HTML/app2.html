@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      
+      .navbar-custom {
+      background-color:#229922;
+      color:#ffffff;
+      border-radius:0;
+    }
+
+    .navbar-custom .navbar-nav > li > a {
+        color:#fff;
+    }
+
+    .navbar-custom .navbar-nav > .active > a {
+        color: #ffffff;
+        background-color:transparent;
+    }
+
+    .navbar-custom .navbar-nav > li > a:hover,
+    .navbar-custom .navbar-nav > li > a:focus,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus,
+    .navbar-custom .navbar-nav > .open >a {
+        text-decoration: none;
+        background-color: #33aa33;
+    }
+
+    .navbar-custom .navbar-brand {
+        color:#eeeeee;
+    }
+    .navbar-custom .navbar-toggle {
+        background-color:#eeeeee;
+    }
+    .navbar-custom .icon-bar {
+        background-color:#33aa33;
+    }
+
+    .style1 {
+      padding: 5px 5px 0px;
+    }
+    .style2 {
+      width: 100%;
+      height: 100%;
+      padding: 20px 20px 0px;
+    }
+    .p-style1 {
+      font-size: 3vh;
+      padding: 1vh;
+    }
+    .th-style1 {
+      font-size: 2.5vh;
+      text-align: center;
+    }
+    .th-style2 {
+      font-size: 3vh;
+      text-align: center;
+    }
+    .td-style1 {
+      font-size: 3vh;
+      border: none;
+    }
+    .td-style2 {
+      font-size: 3vh;
+      text-align: left;
+      border: none;
+    }
+    
+    </style>
+  <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  -->
+  <script>
+    function changetext(id)
+    {
+    var Question = document.getElementById("Question");
+    var Answer1 = document.getElementById("Answer1");
+    var Answer2 = document.getElementById("Answer2");
+    var Answer3 = document.getElementById("Answer3");
+    var Answer4 = document.getElementById("Answer4");
+    var before = document.getElementById("before");
+    var after = document.getElementById("after");
+    var q = '';
+    var a1 = '';
+    var b = 0;
+    var a = 0;
+
+    switch (id) {
+      
+      case 2:
+        q='2.覺得需要花更多的時間在線上才能獲得滿足。';
+        a1='Q2'
+        b = 3;
+        a = 3;
+        break;
+      case 3:
+        q='3.多次努力想控制或停止使用網路，但總是失敗。';
+        a1='Q3'
+        b = 2;
+        a = 4;
+        break;
+      case 4:
+        q='4.企圖減少或停止使用網路時，會覺得沮喪、心情低落、易發脾氣。';
+        a1='Q4'
+        b = 3;
+        a = 5;
+        break;
+      case 5:
+        q='5.花費在上網的時間比預期的要長久。';
+        a1='Q5'
+        b = 4;
+        a = 6;
+        break;
+      case 6:
+        q='6.為了上網，寧願冒著重要的人際關係、工作或教育機會損失的危險。';
+        a1='Q6'
+        b = 5;
+        a = 7;
+        break;
+      case 7:
+        q='7.曾向家人、朋友或他人說謊，以隱瞞自己涉入網路的程度。';
+        a1='Q7'
+        b = 6;
+        a = 8;
+        break;
+      case 8:
+        q='8.上網是為了逃避問題或釋放一些感覺，諸如無助,罪惡,焦慮或沮喪。';
+        a1='Q8'
+        b = 7;
+        a = 9;
+        break;
+      case 9:
+        q='9.每週上網時間為幾小時：';
+        a1='Q9'
+        b = 8;
+        a = 7;
+        Answer3.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;<7';
+        Answer4.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;8~20';
+        Answer1.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;21~40';
+        Answer2.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;>40';
+        break;
+    }
+
+    if (id!==9) {
+      Answer1.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;是';
+      Answer2.innerHTML='<input type="radio" name="' + a1 + '" value="1" required>&nbsp;否';
+    }
+    Question.innerHTML=q;
+    before.innerHTML='<button onclick="changetext(' + b + ')" type="button" class="btn" style="text-align: right; color: white; background:#33aa33">上一題</button>';
+    after.innerHTML='<button onclick="changetext(' + a + ')" type="button" class="btn" style="text-align: right; color: white; background:#33aa33">下一題</button>';
+    }
+  </script>
+  </head>
+  <body style="height: 100%">
+    <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">陽明大學社區醫學中心</a>
+          <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">導覽按鈕</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首頁</a></li>
+            <li><a href="#">關於</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              role="button">分頁 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">分頁</a></li>
+                <li><a href="#">分頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section style="height: 100%">
+      <div style="height: 90%">
+        <div class="row table-responsive">
+          <div class="col-md-6 col-sm-6 col-xs-10 col-md-offset-3 col-sm-offset-3 col-xs-offset-1">
+            <form method="post" action="/TBCheckup">
+              <table class="table" style="border: 4px #229922 groove; height: 500px">
+                <thead>
+                  <tr>
+                    <th class="th-style2" colspan="2" style="text-align:center; border:none;">
+                      請問您有沒有下列這些症狀？
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="th-style2" colspan="2" style="text-align:center; border:none;"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="Question" colspan="2" class="td-style1" style="text-align:justify; border:none; padding: 0 7vw; height: 100px" >1.全神貫注於網際網路或線上活動，在下線後仍繼續想著上網的情形</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td-style1" style="border:none"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td-style1" style="border:none"></td>
+                  </tr>
+                  <tr>
+                    <td id="Answer3" class="td-style2" style="border:none; padding: 0 0 0 9vw;"><input type="radio" name="Q1" value="1" required>&nbsp;是</td>
+                    <td id="Answer4" class="td-style2" style="border:none; padding: 0 0 0 9vw;"><input type="radio" name="Q1" value="0" required>&nbsp;否</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td-style1" style="border:none"></td>
+                  </tr>
+                  <tr>
+                    <td id="Answer1" class="td-style2" style="border:none; padding: 0 0 0 9vw;"><input type="radio" name="Q1" value="1" required>&nbsp;是</td>
+                    <td id="Answer2" class="td-style2" style="border:none; padding: 0 0 0 9vw;"><input type="radio" name="Q1" value="0" required>&nbsp;否</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td-style1" style="border:none"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td-style1" style="border:none"></td>
+                  </tr>
+                  <tr hidden>
+                    <td id="Q1"><input type="text" name="Q1" value="x" required></td>
+                    <td id="Q2"><input type="text" name="Q2" value="x" required></td>
+                    <td id="Q3"><input type="text" name="Q3" value="x" required></td>
+                    <td id="Q4"><input type="text" name="Q4" value="x" required></td>
+                    <td id="Q5"><input type="text" name="Q5" value="x" required></td>
+                    <td id="Q6"><input type="text" name="Q6" value="x" required></td>
+                    <td id="Q7"><input type="text" name="Q7" value="x" required></td>
+                    <td id="Q8"><input type="text" name="Q8" value="x" required></td>
+                  </tr>
+                  <tr> 
+                    <td id="before" style="text-align:center; border:none"><button onclick="changetext(2)" type="button" class="btn" style="text-align: right; color: white; background:#33aa33">上一題</button></td>
+                    <td id="after" style="text-align:center; border:none"><button onclick="changetext(3)" type="button" class="btn" style="text-align: right; color: white; background:#33aa33">下一題</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1" style="background: pink">
+            <div class="style2" style="background: rgb(255, 0, 0)">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p style="font-size:3vh; padding:1vh">肺結核防治</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.767)">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">身體活動</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.445)">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">網路成癮</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: rgba(255, 0, 0, 0.158)">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">視力健康</p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">睡眠健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">情緒健康</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">遠離菸害</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-3 col-xs-6 style1">
+            <div class="style2" style="background: pink;">
+              <img src="http://localhost:5050/RESOURCES/question.png" class="img-responsive">
+              <p class="p-style1">健康體位</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
