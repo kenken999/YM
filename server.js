@@ -33,7 +33,8 @@ function start() {
     
   }
 */
-  http.createServer(onRequest).listen(80);
+ var port = process.env.PORT || 80;
+  http.createServer(onRequest).listen(port);
   console.log("Server has started");
 
 }
