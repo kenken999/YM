@@ -28,7 +28,7 @@ function start() {
     
   }
 
-  http.createServer(onRequest).listen(8882);
+  http.createServer(onRequest).listen(80);
   console.log("Server has started");
 
 }
