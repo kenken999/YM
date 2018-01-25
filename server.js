@@ -6,7 +6,7 @@ var app = express();
 
 app.use('/RESOURCES',express.static(__dirname + '/RESOURCES'));
 
-var server = app.listen(443);
+var server = app.listen(5050);
 
 function start() {
   

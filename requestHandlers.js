@@ -114,7 +114,7 @@ function goIntroduction (response, request) {
     if (err) throw err;
 
     var x1 = '<body onload="getIntroduction(1)">';
-    var y1 = '<body onload="getIntroduction('+requestX.issues+')" style="height: 90%; background: url(' + 'http://localhost:443/RESOURCES/IMAGE/BG_01.png' + ') center center fixed no-repeat; background-size: cover">';
+    var y1 = '<body onload="getIntroduction('+requestX.issues+')" style="height: 90%; background: url(' + 'http://localhost:5050/RESOURCES/IMAGE/BG_01.png' + ') center center fixed no-repeat; background-size: cover">';
     var newHtml = data.replace(x1, y1);
     
     fs.writeFile('./HTML/introduction_1.html', newHtml, 'utf8', function(err) {
@@ -218,7 +218,7 @@ function TBCheckup (response, request) {
 
   fs.readFile('./HTML/result.html', 'utf8', function(err, data) {
     if (err) throw err;
-    var x1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/green.png">';
+    var x1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/green.png">';
     var x2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">您的肺部健康需要關心，建議至鄰近醫療院所胸腔科進一步檢查。</p>';
     var y1 = '';
     var y2 = '';
@@ -226,17 +226,17 @@ function TBCheckup (response, request) {
     switch (result) {
       case 2:
         console.log("result:2");
-        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/red.png">';
+        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/red.png">';
         var y2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">您的肺部健康需要關心，建議至鄰近醫療院所胸腔科進一步檢查。</p>';
         break;
       case 1:
         console.log("result:1");
-        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/oringe.png">';
+        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/oringe.png">';
         var y2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">您的肺部健康需要關心，建議至鄰近醫療院所胸腔科進一步檢查。</p>';
         break;
       case 0:
         console.log("result:0");
-        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/green.png">';
+        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/green.png">';
         var y2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">暫可放心。為維護健康，請持續自我監測。</p>';
       break;
     }
@@ -295,7 +295,7 @@ function sleep1Checkup (response, request) {
 
   fs.readFile('./HTML/result.html', 'utf8', function(err, data) {
     if (err) throw err;
-    var x1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/green.png">';
+    var x1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/green.png">';
     var x2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">您的肺部健康需要關心，建議至鄰近醫療院所胸腔科進一步檢查。</p>';
     var y1 = '';
     var y2 = '';
@@ -303,12 +303,12 @@ function sleep1Checkup (response, request) {
     switch (result) {
       case 2:
         console.log("result:2");
-        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/red.png">';
+        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/red.png">';
         var y2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">明顯之晚睡晚起作息型態。除了進行調整作息之衛教外，建議整體評估情緒、網路使用、體重等健康面向狀態，並建議轉介至心身醫學科或睡眠門診。</p>';
         break;
       case 0:
         console.log("result:0");
-        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:443/RESOURCES/IMAGE/green.png">';
+        var y1 = '<img id="resultLight" class="img-responsive" src="http://localhost:5050/RESOURCES/IMAGE/green.png">';
         var y2 = '<p id="resultText" style="font-size: 3vh; text-align: justify;">無顯著異常之作息型態。</p>';
       break;
     }
