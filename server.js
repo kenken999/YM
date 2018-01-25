@@ -1,6 +1,6 @@
 var http = require("http");
-//var url = require("url");
-//var router = require("./router");
+var url = require("url");
+var router = require("./router");
 //var express = require("express");
 //var app = express();
 
@@ -9,12 +9,12 @@ var http = require("http");
 //var server = app.listen(5050);
 
 function start() {
-  
+  /*
   function onRequest(request,response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!?");
   }
-  /*
+  */
   function onRequest(request, response) {
 
     var pathname = url.parse(request.url).pathname
@@ -32,7 +32,7 @@ function start() {
     });
     
   }
-*/
+
  var port = process.env.PORT || 1337;
   http.createServer(onRequest).listen(port);
   console.log("Server has started");
