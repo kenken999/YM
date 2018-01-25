@@ -10,6 +10,11 @@ var server = app.listen(443);
 
 function start() {
   
+  function onRequest() {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World!?");
+  }
+  /*
   function onRequest(request, response) {
 
     var pathname = url.parse(request.url).pathname
@@ -27,7 +32,7 @@ function start() {
     });
     
   }
-
+*/
   http.createServer(onRequest).listen(80);
   console.log("Server has started");
 
