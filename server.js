@@ -4,9 +4,9 @@ var router = require("./router");
 var express = require("express");
 var app = express();
 
-app.use('/RESOURCES',express.static(__dirname + '/RESOURCES'));
+//app.use('/RESOURCES',express.static(__dirname + '/RESOURCES'));
 
-var server = app.listen(5050);
+//var server = app.listen(5050);
 
 function start() {
   
