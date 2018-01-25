@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "MIT",
+  "license": "",
   "dependencies": {
     "realm": "^2.2.4"
   }
