@@ -1,19 +1,24 @@
 var http = require("http");
 var url = require("url");
 var router = require("./router");
-//var express = require("express");
-//var app = express();
+var express = require("express");
+var app = express();
 
-//app.use('/RESOURCES',express.static(__dirname + '/RESOURCES'));
+app.use('/RESOURCES',express.static(__dirname + '/RESOURCES'));
 
-//var server = app.listen(5050);
+var server = app.listen(5050);
 
 function start() {
+  function onRequest(request,response) {
+    router.route("/start", response, request);
+  }
   
+  /*
   function onRequest(request,response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!?");
   }
+  */
   /*
   function onRequest(request, response) {
 
